@@ -1,8 +1,38 @@
 require "seven_segment"
 
 describe "converter" do
+  seven_segment = SevenSegment.new
+
   it "converts 1 to seven segment one" do
-    seven_segment = SevenSegment.new
-    expect(seven_segment.convert(1)).to eq("|\n|")
+    seg = <<~EO_NUMBER
+
+      |
+
+      |
+
+    EO_NUMBER
+    expect(seven_segment.convert(1)).to eq(seg)
+  end
+
+  it "converts 2 to seven segment two" do
+    seg = <<~EO_NUMBER
+        - 
+          |
+        - 
+      |   
+        - 
+    EO_NUMBER
+    expect(seven_segment.convert(2)).to eq(seg)
+  end
+
+  xit "converts 8 to seven segment eight" do
+    seg = <<~EO_NUMBER
+        -  
+      |   |
+        -  
+      |   |
+        -  
+    EO_NUMBER
+    expect(seven_segment.convert(8)).to eq(seg)
   end
 end

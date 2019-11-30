@@ -1,9 +1,31 @@
 class SevenSegment
-  def convert(number)
-    number = <<-EO_NUMBER
-|
-|
+  zero = <<-EO_NUMBER
+  -  
+|   |
+
+|   |
+  -  
 EO_NUMBER
-    number.chomp
+
+  one = <<-EO_NUMBER
+
+|
+
+|
+
+EO_NUMBER
+
+  two = <<~EO_NUMBER
+      - 
+        |
+      - 
+    |   
+      - 
+  EO_NUMBER
+
+  DIGITS = [zero, one, two]
+
+  def convert(number)
+    number = DIGITS[number.to_i]
   end
 end
