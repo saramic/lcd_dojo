@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.join(File.dirname(__FILE__), "..", "lib")
+
+require "seven_segment"
+
+seven_segment = SevenSegment.new
+puts seven_segment.convert(ARGV.join(" "))
