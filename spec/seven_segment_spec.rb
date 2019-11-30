@@ -25,7 +25,7 @@ describe "converter" do
     expect(seven_segment.convert(2)).to eq(seg)
   end
 
-  xit "converts 8 to seven segment eight" do
+  it "converts 8 to seven segment eight" do
     seg = <<~EO_NUMBER
         -  
       |   |
