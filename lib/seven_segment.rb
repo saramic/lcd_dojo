@@ -15,12 +15,12 @@ EO_NUMBER
         
   EO_NUMBER
 
-  two = <<~EO_NUMBER
-      - 
+  two = <<-EO_NUMBER.gsub(/^\s{4}/, "")
+      -  
         |
-      - 
-    |   
-      - 
+      -  
+    |    
+      -  
   EO_NUMBER
 
   three = four = five = six = seven = nine = nil
